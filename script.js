@@ -41,7 +41,7 @@ myApp.controller('DeveloperController', ['$scope', 'customService', 'customFacto
     console.log(factoryData);
  }]);
  
- myApp.controller('testing1', ['$scope', 'customService', 'customFactory', function($scope, customService, customFactory) {
+ myApp.controller('testing2', ['$scope', 'customService', 'customFactory', function($scope, customService, customFactory) {
     $scope.name="asdsas";
     console.log('controller...');
     customService.callServiceMethod();
