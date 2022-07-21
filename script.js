@@ -41,3 +41,10 @@ myApp.controller('DeveloperController', ['$scope', 'customService', 'customFacto
     console.log(factoryData);
  }]);
  
+ myApp.controller('testing', ['$scope', 'customService', 'customFactory', function($scope, customService, customFactory) {
+    $scope.name="asdsas";
+    console.log('controller...');
+    customService.callServiceMethod();
+    var factoryData = customFactory.callFactoryMethod();
+    console.log(factoryData);
+ }]);
