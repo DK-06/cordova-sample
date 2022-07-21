@@ -1,0 +1,66 @@
+body {
+    margin: 10px;
+}
+
+.user_view {
+    height: 230px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: blueviolet;
+}
+
+.back-icon {
+    color: black;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 10%;
+}
+
+.user_id {
+    font-size: 40px;
+    color: grey;
+}
+
+.title {
+    color: black;
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.header {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.photo-cell {
+    background-color: rgb(225, 225, 225);
+    margin: 20px !important;
+    border-radius: 20px;
+}
+
+.image-rounded {
+    border-radius: 50px;
+    height: 160px;
+    width: 180px;
+}
+
+.image-cell {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-padding {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    vertical-align: middle;
+    height: 280px;
+}
+
+span {
+    font-size: 40px;
+    color: black;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <div ng-controller="homeController">
+            <div class="row">
+                <div class="col-sm-5">
+                    <span ng-click=goBack() class="fa fa-arrow-left fa-5x back-icon"></span>
+                </div>
+                <div class="col-sm-7 title">
+                    <p class="header">ListView</p>
+                </div>
+            </div>
+            <div class="row photo-cell"  ng-repeat="users in usersList">
+                <div class="col-sm-3 text-center image-cell">
+                    <img class="image-rounded" ng-src="{{users.thumbnailUrl}}" alt="image" />
+                </div>
+                <div class="col-sm-8 photo-padding">
+                    <div class="row">
+                        <span>
+                            Title: <span>{{users.title}}</span>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <p class="user_id">
+                            User id: {{users.id}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-1 image-cell">
+                    <label class="fa fa-chevron-right fa-3x"></label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css" />
+    </head>
+    <body>
+        <div ng-controller="loginController">
+            <h1 class="headText">
+                Log In
+            </h1>
+            <form ng-submit=validateUser()>
+                <div class="input-wrapper">
+                    <input type="text" ng-model="username" placeholder="Username">
+                    <label class="fa fa-user fa-5x input-icon"></label>
+                </div>
+                <div class="input-wrapper" ng-hide="isPasswordVisible">
+                    <input type="password" ng-model="password" placeholder="Password">
+                    <label class="fa fa-lock fa-5x input-icon"></label>
+                    <span ng-click=changeVisibility() class="fa fa-eye fa-5x icon-right"></span>
+                </div>
+                <div class="input-wrapper" ng-show="isPasswordVisible">
+                    <input type="text" ng-model="password" placeholder="Password">
+                    <label class="fa fa-lock fa-5x input-icon"></label>
+                    <span href="#" ng-click=changeVisibility() class="fa fa-eye-slash fa-5x icon-right"></span>
+                </div>
+                <div>
+                    <input type="submit" id="loginButton" value="Log In" ng-click=test()>
+                    <!-- <button type="button" id="loginButton" ng-click=test()>Log In</button> -->
+                    <!-- <button type="button" id="loginButton">Log In</button> -->
+                </div>
+            </form>
+            <div class="row">
+                <span class="white-background">First time here? </span>
+                <a class="white-background">Sign Up</a>
+            </div>
+        </div>
+
+        <script src="login.module.js"></script>
+    </body>
+</html>
