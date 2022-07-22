@@ -13,6 +13,10 @@ $routeProvider.
         templateUrl: 'home/home.html',
         controller: 'homeController'
     })
+    .when('/cart', {
+        templateUrl: 'cart/cart.html',
+        controller: 'cartController'
+    })
     .otherwise({
         redirectTo: '/login'
     });

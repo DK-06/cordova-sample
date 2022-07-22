@@ -13,19 +13,19 @@
                     <p class="header">ListView</p>
                 </div>
             </div>
-            <div class="row photo-cell"  ng-repeat="users in usersList">
-                <div class="col-sm-3 text-center image-cell">
-                    <img class="image-rounded" ng-src="{{users.thumbnailUrl}}" alt="image" />
+            <div class="row photo-cell" ng-click=cartPage() ng-class="{0: 'cellRed', 1: 'cellGrey'}[{{user.albumId}} % 2]"  ng-repeat="user in usersList">
+                <div class="col-sm-3 image-cell">
+                    <img class="image-rounded" ng-src="{{user.thumbnailUrl}}" alt="image" />
                 </div>
                 <div class="col-sm-8 photo-padding">
                     <div class="row">
                         <span>
-                            Title: <span>{{users.title}}</span>
+                            Title: <span>{{user.title}}</span>
                         </span>
                     </div>
                     <div class="row">
                         <p class="user_id">
-                            User id: {{users.id}}
+                            User id: {{user.id}}
                         </p>
                     </div>
                 </div>
