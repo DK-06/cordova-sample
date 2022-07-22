@@ -35,7 +35,6 @@ body {
 }
 
 .photo-cell {
-    background-color: rgb(225, 225, 225);
     margin: 20px !important;
     border-radius: 20px;
 }
@@ -58,6 +57,14 @@ body {
     margin-bottom: 40px;
     vertical-align: middle;
     height: 280px;
+}
+
+.cellRed {
+    background-color: rgb(188, 132, 132)
+}
+
+.cellGrey {
+    background-color: rgb(225, 225, 225);
 }
 
 span {

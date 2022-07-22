@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart</title>
+    </head>
+    <body>
+        <div ng-controller="cartController">
+            <div class="row">
+                <div class="col-sm-5">
+                    <span ng-click=goBack() class="fa fa-arrow-left fa-5x back-icon"></span>
+                </div>
+                <div class="col-sm-7 title">
+                    <p class="header">Cart</p>
+                </div>
+            </div>
+            <div class="row product-container" ng-repeat="product in cartList">
+                <div class="col-sm-3 product-image">
+                    <img class="image-rounded" ng-src="{{product.url}}" alt="image" />
+                </div>
+                <div class="col-sm-5 description">
+                    <div class="row">
+                        <span class="product-title">{{product.title}}</span>
+                    </div>
+                    <div class="row">
+                        <p class="product-price">
+                            &#x24 {{product.price}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row close-container">
+                        <span ng-click=removeProduct(product) class="fa fa-times fa-3x close-icon"></span>
+                    </div>
+                    <div class="row center-div">
+                        <div class="col-sm-4">
+                            <span ng-click=removeQuantity(product) class="fa fa-minus-square fa-3x minus-icon"></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="product-quantity">
+                                {{product.quantity}}
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <span ng-click=addQuantity(product) class="fa fa-plus-square fa-3x plus-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

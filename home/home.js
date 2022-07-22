@@ -19,4 +19,8 @@ homeModule.controller('homeController', ['$scope', '$location', 'sampleApiCall',
     $scope.goBack = function() {
         $location.path('/login');
     }
+
+    $scope.cartPage = function() {
+        $location.path('/cart');
+    }
 }]);
